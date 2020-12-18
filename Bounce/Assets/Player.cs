@@ -17,10 +17,10 @@ public class Player : MonoBehaviour
     private void SetUpBoundaries()
     {
         Camera camera = Camera.main;
-        xMin = camera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
-        xMax = camera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
-        yMin = camera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
-        yMax = camera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
+        xMin = camera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x+1;
+        xMax = camera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x-1;
+        yMin = camera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y+1;
+        yMax = camera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y-1;
     }
     // Update is called once per frame
     void Update()
