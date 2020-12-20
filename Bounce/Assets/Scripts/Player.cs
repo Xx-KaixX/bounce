@@ -31,17 +31,19 @@ public class Player : MonoBehaviour
         Move();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = new Vector2(0, jumpDelta);
+            rb.velocity = new Vector2(0, jumpDelta+10);
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            rb.velocity = new Vector2(0, -jumpDelta);
+            rb.velocity = new Vector2(0, -jumpDelta-10);
         }
     }
     private void Move()
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime*moveSpeed;
         var newXPos =Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-        transform.position = new Vector2(newXPos, transform.position.y);
+        var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+        var newYPos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
+        transform.position = new Vector2(newXPos, newYPos);
     }
 }
