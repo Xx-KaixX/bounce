@@ -38,8 +38,8 @@ public class Player : MonoBehaviour
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime*moveSpeed;
         var newXPos =Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-        var deltaY = Input.GetAxis("Jump") * Time.deltaTime * moveSpeed;
-        var newYPos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
+        //var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+        var newYPos = Mathf.Clamp(transform.position.y, yMin, yMax);
         transform.position = new Vector2(newXPos, newYPos);
     }
 }
