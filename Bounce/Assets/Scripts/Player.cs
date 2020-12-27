@@ -10,11 +10,12 @@ public class Player : MonoBehaviour
     float yMax;
     [SerializeField] float jumpDelta;
     [SerializeField] float moveSpeed;
-    [SerializeField] Rigidbody2D rb;
+    Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         SetUpBoundaries();
+        rb = GetComponent<Rigidbody2D>();
     }
     private void SetUpBoundaries()
     {
@@ -40,8 +41,7 @@ public class Player : MonoBehaviour
         //var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
         var newYPos = Mathf.Clamp(transform.position.y, yMin, yMax);
         transform.position = new Vector2(newXPos, newYPos);
-        //rb.rotation = 30.0f;
-        transform.Rotate(0, 0, 5.0f);
-        //rb.MovePosition((Vector2)transform.position + (movement * moveSpeed * Time.deltaTime));
+        rb.rotation = 30.0f;
+        //transform.Rotate(0, 0, 10.0f);
     }
 }
