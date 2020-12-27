@@ -19,10 +19,10 @@ public class Player : MonoBehaviour
     private void SetUpBoundaries()
     {
         Camera camera = Camera.main;
-        xMin = camera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x+5;
-        xMax = camera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x-5;
-        yMin = camera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y+5;
-        yMax = camera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y-5;
+        xMin = camera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x+6.5f;
+        xMax = camera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x- 6.5f;
+        yMin = camera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y+ 6.5f;
+        yMax = camera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y- 6.5f;
     }
     // Update is called once per frame
     void Update()
@@ -30,14 +30,14 @@ public class Player : MonoBehaviour
         Move();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = new Vector2(0, jumpDelta+10);
+            rb.velocity = new Vector2(0, jumpDelta);
         }
     }
     private void Move()
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime*moveSpeed;
         var newXPos =Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-        var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+        //var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
         var newYPos = Mathf.Clamp(transform.position.y, yMin, yMax);
         transform.position = new Vector2(newXPos, newYPos);
         //rb.rotation = 30.0f;

@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{ABE4CEBD-87BE-0A97-95FA-B9B3B101725D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MakeObjectJumpOffPlatform.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="45" Column="2" />
+      <File FileName="Assets/Scripts/Player.cs" Line="33" Column="51" />
       <File FileName="Assets/Scripts/ColorCycler/ColorCycler.cs" Line="11" Column="17" />
+      <File FileName="Assets/MakeObjectJumpOffPlatform.cs" Line="7" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
