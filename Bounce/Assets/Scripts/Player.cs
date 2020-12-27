@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         //var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
         var newYPos = Mathf.Clamp(transform.position.y, yMin, yMax);
         transform.position = new Vector2(newXPos, newYPos);
-        //rb.rotation = 30.0f;
-        transform.Rotate(0, 0, 10.0f);
+        rb.rotation = 30.0f;
+        //transform.Rotate(0, 0, 10.0f);
     }
 }
