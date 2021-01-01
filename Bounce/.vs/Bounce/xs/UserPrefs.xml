@@ -1,14 +1,12 @@
 ﻿<Properties StartupConfiguration="{ABE4CEBD-87BE-0A97-95FA-B9B3B101725D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MakeObjectJumpOffPlatform.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="33" Column="51" />
-      <File FileName="Assets/Scripts/ColorCycler/ColorCycler.cs" Line="11" Column="17" />
-      <File FileName="Assets/MakeObjectJumpOffPlatform.cs" Line="7" Column="17" />
+      <File FileName="Assets/Scripts/Player.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a95a6081-f9ce-429b-87d3-0b07d8085752" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e304277c-00dc-4663-9a41-cdbfe32aa98c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

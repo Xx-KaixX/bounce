@@ -7,6 +7,6 @@ public class MakeObjectJumpOffPlatform : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         collision.gameObject.GetComponent<Rigidbody2D>().velocity =
-        new Vector2(0, 20.0f);
+        new Vector2(0, 9.0f);
     }
 }

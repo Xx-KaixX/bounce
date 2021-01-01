@@ -10,7 +10,11 @@ public class Player : MonoBehaviour
     float yMax;
     [SerializeField] float jumpDelta;
     [SerializeField] float moveSpeed;
+    [SerializeField] GameObject bullet;
+    [SerializeField] float speed = 5.0f;
+    [SerializeField] GameObject gun;
     Rigidbody2D rb;
+    Coroutine c;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +33,18 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             rb.velocity = new Vector2(0, jumpDelta);
+        }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            c = StartCoroutine(Shoot());
+        }
+        if (Input.GetButtonUp("Fire1"))
+        {
+            StopCoroutine(c);
+            Debug.Log("Aaaa");
         }
     }
     private void Move()
@@ -43,5 +56,14 @@ public class Player : MonoBehaviour
         transform.position = new Vector2(newXPos, newYPos);
         rb.rotation = 30.0f;
         //transform.Rotate(0, 0, 10.0f);
+    }
+    private IEnumerator Shoot()
+    {
+        while (true)
+        {
+            GameObject lazar = Instantiate(bullet, gun.transform.position, gun.transform.rotation) as GameObject;
+            lazar.GetComponent<Rigidbody2D>().velocity = new Vector2(1, 10);
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 }
