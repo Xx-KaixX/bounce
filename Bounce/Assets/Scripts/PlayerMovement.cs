@@ -18,8 +18,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        SetUpBoundaries();
     }
-
     // Update is called once per frame
     void Update()
     {
