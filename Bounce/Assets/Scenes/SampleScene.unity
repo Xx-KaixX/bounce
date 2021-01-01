@@ -776,11 +776,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1822110200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca57ff6afafc45849094cffafe35a41, type: 3}
+  m_Script: {fileID: 11500000, guid: e39b750c4b7e67e4095ad36b0ac4a757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpDelta: 2
-  moveSpeed: 5
+  speed: 10
+  rb: {fileID: 0}
+  movement: {x: 0, y: 0}
 --- !u!50 &1822110202
 Rigidbody2D:
   serializedVersion: 4
