@@ -6,9 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {   
     public float speed = 10.0f;
     public Rigidbody2D rb;
-    public Vector2 movement;
+    public Vector2 Movement;
     public float RevSpeed = 100.0f;
 
+    // Jump Variables
+    public float JumpForce;
+    public float FallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,21 +23,43 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")
-        movement = new Vector2(Input.GetAxis("Horizontal"), 0);
-
+        //Movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")
+        Movement = new Vector2(Input.GetAxis("Horizontal"), 0);
+        Jump();
     }
+
     void FixedUpdate()
     {
-        MoveCharacter(movement);
+        MoveCharacter(Movement);
     }
+
+    // MoveCharacter moves the character horizontally with consideration of speed
     void MoveCharacter(Vector2 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
-        
+        //rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
+        rb.AddForce(direction * speed);
+        //rb.AddTorque(direction * speed);
+
     }
+
+    //RotateCharacter rotates the character at the speed of RevSpeed
     void RotateCharacter()
     {
         rb.MoveRotation(rb.rotation + RevSpeed * Time.fixedDeltaTime);
+    }
+    void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector2.up * JumpForce);
+        }
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (rb.velocity.y > 0 && !Input.GetButtonDown("Jump"))
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
     }
 }
