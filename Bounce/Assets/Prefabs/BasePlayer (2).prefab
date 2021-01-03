@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2760690876111062952}
   - component: {fileID: 2760690876111062959}
   - component: {fileID: 2760690876111062958}
+  - component: {fileID: 2909521931257014400}
   m_Layer: 0
   m_Name: BasePlayer (2)
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c5581778df10f1e4b9192e745cc3055f, type: 3}
-  m_Color: {r: 0.9528302, g: 0.92701966, b: 0.92136884, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -259,6 +260,28 @@ PolygonCollider2D:
       - {x: 5.31, y: -5.2999997}
       - {x: 5.3027873, y: -5.2652597}
       - {x: 5.13, y: -4.99}
+--- !u!114 &2909521931257014400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2760690876111062957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e54281313146470c90e8f84e1155a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hexCodes:
+  - '#1128bf'
+  - '#FFE74C'
+  - '#E0000F'
+  - '#28F728 '
+  - '#23F0C7'
+  - '#FB62F6'
+  - '#FA8500'
+  - '#DB3DA1'
+  - '#CF3A44 '
 --- !u!1 &2760690876730335653
 GameObject:
   m_ObjectHideFlags: 0

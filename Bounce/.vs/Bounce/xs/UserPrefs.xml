@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{ABE4CEBD-87BE-0A97-95FA-B9B3B101725D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerSettings.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player.cs" Line="36" Column="9" />
-      <File FileName="Assets/Scripts/MakeObjectJumpOffPlatform.cs" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="5" Column="14" />
+      <File FileName="Assets/Scripts/Player.cs" Line="11" Column="70" />
+      <File FileName="Assets/Scripts/MakeObjectJumpOffPlatform.cs" Line="4" Column="1" />
+      <File FileName="Assets/PlayerSettings.cs" Line="7" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
