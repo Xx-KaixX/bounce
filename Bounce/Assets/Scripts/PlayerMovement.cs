@@ -37,7 +37,14 @@ public class PlayerMovement : MonoBehaviour
     {
         //rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
         rb.AddForce(direction * speed);
-        //rb.AddTorque(direction * speed);
+        if (Input.GetKey(KeyCode.A))
+        {
+            rb.AddTorque(RevSpeed);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            rb.AddTorque(0 - RevSpeed);
+        }
 
     }
 
